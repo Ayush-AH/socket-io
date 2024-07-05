@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .message-container::-webkit-scrollbar{
+        display: none;
+      } 
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full relative h-screen bg-[#0F182B] flex flex-col items-center pt-20 gap-6"> 
+      <h3 class="typing text-green-500 fixed top-[5%]"></h3>
+      <div  class="message-container bg-transparent border border-zinc-200 h-[50%] w-[80%] p-4 overflow-hidden overflow-y-auto">
+      </div>
+      <div class="flex gap-6">
+        <input type="text" class="bg-transparent text-white border border-zinc-200 p-2 rounded-lg" placeholder="Enter your message...">
+        <button class="p-2 bg-blue-500 rounded-lg text-white">Send</button>
+      </div>
+    </div>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>
